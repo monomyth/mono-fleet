@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "handle": "monomyth",
+  "operator": "Eugene Ray",
+  "desks": [
+    {
+      "id": "fleet",
+      "name": "FLEET",
+      "url": "https://mono-fleet.grok.me",
+      "role": "bots",
+      "description": "Every public Grok Bot Eugene has shipped, with a working sample."
+    },
+    {
+      "id": "pilot",
+      "name": "MONOMYTH",
+      "url": "https://monomyth.grok.me",
+      "role": "resume",
+      "description": "The operator — resume, experience, and how to reach him."
+    }
+  ]
+}

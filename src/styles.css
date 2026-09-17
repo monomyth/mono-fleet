@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0b0c0b;
+  --color-surface: #141513;
+  --color-raised: #1c1d1a;
+  --color-fg: #eceae3;
+  --color-muted: #8d8b82;
+  --color-faint: #5c5b55;
+  --color-border: #2a2b27;
+  --color-line: #3a3b36;
+  --color-accent: #d8ddd4;
+  --color-accent-fg: #0b0c0b;
+  --color-ink: #c45c4a;
+  --color-paper: #e7e1d3;
+  --color-paper-ink: #1c1a16;
+  --color-phosphor: #b7d9a3;
+
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", "Times New Roman", serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 28px;
+
+  --shadow-border: 0 0 0 1px rgba(236, 234, 227, 0.08);
+  --shadow-border-hover: 0 0 0 1px rgba(236, 234, 227, 0.14);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-bg);
+    color: var(--color-fg);
+  }
+  body {
+    font-family: var(--font-sans);
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  ::selection {
+    background: color-mix(in oklab, var(--color-accent) 35%, transparent);
+    color: var(--color-fg);
+  }
+}
+
+@layer utilities {
+  .grid-paper {
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in oklab, var(--color-fg) 5.5%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--color-fg) 5.5%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 56px 56px;
+    background-position: -1px -1px;
+  }
+  .hairline {
+    box-shadow: var(--shadow-border);
+  }
+  .hairline-hover:hover {
+    box-shadow: var(--shadow-border-hover);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@keyframes fleet-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.stagger-in > * {
+  opacity: 0;
+  animation: fleet-enter 400ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.stagger-in > *:nth-child(1) {
+  animation-delay: 0ms;
+}
+.stagger-in > *:nth-child(2) {
+  animation-delay: 60ms;
+}
+.stagger-in > *:nth-child(3) {
+  animation-delay: 120ms;
+}
+.stagger-in > *:nth-child(4) {
+  animation-delay: 180ms;
+}
+.stagger-in > *:nth-child(5) {
+  animation-delay: 240ms;
+}
+.stagger-in > *:nth-child(6) {
+  animation-delay: 300ms;
+}

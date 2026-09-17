@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "FLEET",
+      "hasCanvas": false,
+      "bodyTextLen": 2936,
+      "bodyTextHash": "1c95eba38e1f1517fada7d8af6aeda9d96e72ee7d73c73c594aa76bea6a2e12f",
+      "bodyTextPrefix": "FLEET DESK / @MONOMYTH FLEET HIRE ME Scan timeline GROK BOT DESK",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "FLEET",
+      "hasCanvas": false,
+      "bodyTextLen": 2913,
+      "bodyTextHash": "6e6d0629f1629a4c93270c30f8ad0e7d4040b4e366a284392feb0e4e9c8cad79",
+      "bodyTextPrefix": "FLEET HIRE ME Scan timeline GROK BOT DESK The fleet. Every publi",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
