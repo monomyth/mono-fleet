@@ -1,5 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
-import { DESKS, FLEET_URL, PILOT_URL, type DeskId } from "@/lib/constellation";
+import { DESKS, FLEET_URL, PILOT_URL, SLOP_URL, type DeskId } from "@/lib/constellation";
 import { X_PROFILE } from "@/lib/fleet/catalog";
 import { cn } from "@/lib/utils";
 
@@ -7,12 +7,12 @@ export function ConstellationFooter({ current }: { current: DeskId }) {
   return (
     <footer className="border-t border-border bg-bg">
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_1fr]">
-        <div>
+        <div className="lg:col-span-2">
           <p className="font-mono text-[11px] tracking-[0.22em] text-muted uppercase">
             Constellation
           </p>
           <p className="mt-3 max-w-md font-display text-2xl leading-tight tracking-tight">
-            Two desks, one operator.
+            Three desks, one operator.
           </p>
           <p className="mt-3 max-w-md text-sm leading-relaxed text-muted">
             FLEET is the bot desk.{" "}
@@ -24,10 +24,19 @@ export function ConstellationFooter({ current }: { current: DeskId }) {
             >
               monomyth.grok.me
             </a>{" "}
-            is the hire-me desk. Same person, linked.
+            is the hire-me desk.{" "}
+            <a
+              href={SLOP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-fg underline decoration-line underline-offset-4 hover:decoration-fg"
+            >
+              jon-slop.grok.me
+            </a>{" "}
+            is the Slop Cannon catalog. Same person, linked.
           </p>
         </div>
-        <div className="grid gap-2 sm:grid-cols-2">
+        <div className="grid gap-2 sm:grid-cols-3 lg:col-span-2">
           {DESKS.map((desk) => {
             const here = desk.id === current;
             const inner = (
@@ -84,6 +93,14 @@ export function ConstellationFooter({ current }: { current: DeskId }) {
             className="hover:text-muted"
           >
             {PILOT_URL.replace("https://", "")}
+          </a>
+          <a
+            href={SLOP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-muted"
+          >
+            {SLOP_URL.replace("https://", "")}
           </a>
           <a href={X_PROFILE} target="_blank" rel="noreferrer" className="hover:text-muted">
             X

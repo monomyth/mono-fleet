@@ -6,7 +6,7 @@ import { BotExample } from "@/components/examples/bot-example";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { listFleet } from "@/lib/fleet/api";
-import { PILOT_URL } from "@/lib/constellation";
+import { PILOT_URL, SLOP_URL } from "@/lib/constellation";
 import { formatDeskDate } from "@/lib/utils";
 
 export const Route = createFileRoute("/bots/$slug")({
@@ -56,6 +56,14 @@ function BotPage() {
                 <ArrowUpRight />
               </a>
             </Button>
+            {bot.siteUrl ? (
+              <Button variant="ghost" asChild>
+                <a href={bot.siteUrl} target="_blank" rel="noreferrer">
+                  {bot.siteUrl === SLOP_URL ? "jon-slop.grok.me" : "Catalog"}
+                  <ArrowUpRight />
+                </a>
+              </Button>
+            ) : null}
             {bot.sourceUrl ? (
               <Button variant="ghost" asChild>
                 <a href={bot.sourceUrl} target="_blank" rel="noreferrer">

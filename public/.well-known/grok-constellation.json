@@ -16,6 +16,13 @@
       "url": "https://monomyth.grok.me",
       "role": "resume",
       "description": "The operator — resume, experience, and how to reach him."
+    },
+    {
+      "id": "slop",
+      "name": "JON SLOP",
+      "url": "https://jon-slop.grok.me",
+      "role": "catalog",
+      "description": "520 Slop Cannon music videos. The watch list Jon Slop keeps."
     }
   ]
 }

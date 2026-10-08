@@ -2,12 +2,12 @@ import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-r
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { Toaster } from "sonner";
-import { PILOT_URL } from "@/lib/constellation";
+import { PILOT_URL, SLOP_URL } from "@/lib/constellation";
 import appCss from "../styles.css?url";
 
 const APP_NAME = "FLEET";
 const APP_DESC =
-  "Grok Bots by @monomyth — a living desk of agents, samples, and share links. Sister desk: monomyth.grok.me.";
+  "Grok Bots by @monomyth — a living desk of agents, samples, and share links. Sister desks: monomyth.grok.me and jon-slop.grok.me.";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -25,6 +25,8 @@ export const Route = createRootRoute({
       { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
       { rel: "me", href: PILOT_URL },
       { rel: "alternate", href: PILOT_URL, title: "Hire me — Eugene Ray" },
+      { rel: "me", href: SLOP_URL },
+      { rel: "alternate", href: SLOP_URL, title: "Jon Slop — Slop Cannon catalog" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

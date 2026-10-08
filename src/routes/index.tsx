@@ -7,7 +7,7 @@ import { ConstellationFooter } from "@/components/constellation-footer";
 import { Badge } from "@/components/ui/badge";
 import { listFleet } from "@/lib/fleet/api";
 import { pingSisterDesk } from "@/lib/constellation-api";
-import { PILOT_URL } from "@/lib/constellation";
+import { PILOT_URL, SLOP_URL } from "@/lib/constellation";
 import { X_PROFILE } from "@/lib/fleet/catalog";
 import { formatDeskDate } from "@/lib/utils";
 
@@ -55,6 +55,15 @@ function Home() {
               className="text-fg underline decoration-line underline-offset-4 hover:decoration-fg"
             >
               monomyth.grok.me
+            </a>
+            . The Slop Cannon catalog is{" "}
+            <a
+              href={SLOP_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="text-fg underline decoration-line underline-offset-4 hover:decoration-fg"
+            >
+              jon-slop.grok.me
             </a>
             .
           </p>

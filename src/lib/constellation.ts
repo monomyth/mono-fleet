@@ -1,8 +1,9 @@
 export const FLEET_URL = "https://mono-fleet.grok.me";
 export const PILOT_URL = "https://monomyth.grok.me";
+export const SLOP_URL = "https://jon-slop.grok.me";
 export const LINKEDIN_URL = "https://www.linkedin.com/in/eugeneray/";
 
-export type DeskId = "fleet" | "pilot";
+export type DeskId = "fleet" | "pilot" | "slop";
 
 export type Desk = {
   id: DeskId;
@@ -32,6 +33,15 @@ export const DESKS: Desk[] = [
     external: true,
     role: "Pilot desk",
     blurb: "The operator — resume, experience, and how to reach him.",
+  },
+  {
+    id: "slop",
+    name: "JON SLOP",
+    label: "Slop",
+    href: SLOP_URL,
+    external: true,
+    role: "Slop Cannon catalog",
+    blurb: "520 Slop Cannon music videos, Aug 24 to Oct 7. The watch list Jon Slop keeps.",
   },
 ];
 
