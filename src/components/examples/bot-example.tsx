@@ -5,6 +5,7 @@ import { SolidVibeExample } from "./solid-vibe";
 import { NeuroscienceExample } from "./neuroscience";
 import { SpaceMonkeyExample } from "./space-monkey";
 import { HandelExample } from "./handel";
+import { TruffleExample } from "./truffle";
 import { JonSlopExample } from "./jon-slop";
 import { SteveExample } from "./steve";
 import { LumaScoutExample } from "./luma-scout";
@@ -13,6 +14,7 @@ import { PheidExample } from "./pheid";
 import { ReplicatorExample } from "./replicator";
 
 export function BotExample({ kind }: { kind: ExampleKind | null }) {
+  if (kind === "truffle") return <TruffleExample />;
   if (kind === "jon-slop") return <JonSlopExample />;
   if (kind === "steve") return <SteveExample />;
   if (kind === "luma-scout") return <LumaScoutExample />;

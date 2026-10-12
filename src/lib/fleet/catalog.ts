@@ -1,4 +1,5 @@
 export type ExampleKind =
+  | "truffle"
   | "jon-slop"
   | "steve"
   | "luma-scout"
@@ -38,6 +39,24 @@ export const SCAN_SINCE = "2026-08-11";
 
 export const SEED_BOTS: FleetBot[] = [
   {
+    id: "22XPum6Dznc_jnPeuWGTt",
+    slug: "truffle",
+    name: "Truffle",
+    description:
+      "Finds small, high-quality X accounts in your interests that you probably don't follow yet. Reads your public profile, proposes niches, and sends account-first digests with a draft intro line for each.",
+    author: AUTHOR,
+    shareUrl: "https://x.ai/bot/22XPum6Dznc_jnPeuWGTt",
+    sourceUrl: "https://x.com/monomyth/status/2109371915098009797",
+    ogImage: null,
+    announcedAt: "2026-10-12T02:53:49.000Z",
+    category: "Watch",
+    cover: "/samples/truffle-cover.jpg",
+    exampleKind: "truffle",
+    featured: true,
+    sampleCaption: "25 intros. Median 560 followers. 56% robotics.",
+    task: "find small accounts in a stated interest and send an account-first digest with a draft intro line",
+  },
+  {
     id: "Ky0xwV840V9RZoTPQlne_",
     slug: "jon-slop",
     name: "Jon Slop",
@@ -53,7 +72,7 @@ export const SEED_BOTS: FleetBot[] = [
     cover: "/samples/jon-slop-cover.jpg",
     exampleKind: "jon-slop",
     featured: true,
-    sampleCaption: "A short line per new Slop Cannon video. The catalog is next door.",
+    sampleCaption: "The watch, and the catalog next door.",
     task: "watch X for new Slop Cannon videos and send a short line, with the known set on jon-slop.grok.me",
   },
   {

@@ -29,11 +29,11 @@ export function JonSlopExample() {
         <figure className="overflow-hidden rounded-lg bg-bg">
           <img
             src="/samples/jon-slop-cover.jpg"
-            alt="A dark wall of blank video frames, one of them lit"
-            className="aspect-[16/10] w-full object-cover outline outline-1 -outline-offset-1 outline-fg/10"
+            alt="Jon Slop, a cloaked figure with a pig snout in falling snow"
+            className="aspect-[16/10] w-full object-cover object-[center_30%] outline outline-1 -outline-offset-1 outline-fg/10"
           />
           <figcaption className="px-1 pt-2 font-mono text-[11px] tracking-wide text-muted">
-            A short line per video. The catalog is the desk next door.
+            The watch.
           </figcaption>
         </figure>
         <a
